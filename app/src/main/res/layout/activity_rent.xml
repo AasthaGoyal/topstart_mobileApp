@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".RentActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="Search Property For Rent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search By Location:" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <EditText
+        android:id="@+id/txtSuburb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Suburb/City"
+        android:inputType="textPostalAddress" />
+
+
+    <TextView
+        android:id="@+id/txtMoreFilters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="More Filters"
+        android:textAlignment="textEnd"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp" />
+
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price Range:"
+                />
+
+            <EditText
+                android:id="@+id/txtFromPrice"
+                android:layout_width="157dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="From"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/txtToPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="To"
+                android:inputType="textPersonName" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Property Type:" />
+
+            <Spinner
+                android:id="@+id/spinnerPropertyType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/propertyType"
+                android:prompt="@string/country_prompt" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No of Bedrooms"/>
+
+            <EditText
+                android:id="@+id/txtNoOfBedrooms"
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="No of Bedrooms"
+                android:inputType="number|textPersonName" />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No of Bathrooms"/>
+
+            <EditText
+                android:id="@+id/txtNoOfBathrooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="No of Bathrooms"
+                android:inputType="number|textPersonName" />
+
+        </TableRow>
+
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Availability" />
+
+            <Spinner
+                android:id="@+id/spinnerAvailability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/availability"
+                android:prompt="@string/country_prompt" />
+        </TableRow>
+
+        <TableRow>
+
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parking Spaces:" />
+
+            <EditText
+                android:id="@+id/txtNoOfParking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="No Of Parking spaces"
+                android:inputType="number" />
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search" />
+
+
+</LinearLayout>
