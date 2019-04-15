@@ -58,7 +58,12 @@ public class DemoImage extends AppCompatActivity implements View.OnClickListener
         buttonChoose.setOnClickListener(this);
         buttonUpload.setOnClickListener(this);
     }
-    private void showFileChooser() {
+
+    @Override
+    public void onClick(View v) {
+
+    }
+   /* private void showFileChooser() {
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
@@ -123,5 +128,5 @@ public class DemoImage extends AppCompatActivity implements View.OnClickListener
     @Override
     public void onClick(View v) {
 
-    }
+    }*/
 }
